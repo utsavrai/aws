@@ -1,7 +1,7 @@
 <?php
 require "testing.php";
-$username = isset($_POST["utsav27"])?$_POST["utsav27"]:"utsav27";	
-$pwd = isset($_POST["123"])?$_POST["123"]:"123";
+$username = $_POST["user_name"];	
+$pwd = $_POST["password"];
 $flag = 0;
 $mysql_qry = "select * from users where username like '$username' and password like '$pwd' ;";
 $result = mysqli_query($conn,$mysql_qry);
